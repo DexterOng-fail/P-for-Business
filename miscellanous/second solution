@@ -1,0 +1,34 @@
+def check_pw(password):
+    if len(password) < 14:
+        return("weak password")
+    else:
+        if password[:].isupper() == False and password[:].islower() == True:
+            return("weak password")
+        elif password[:].isupper() == True and password[:].islower() == False:
+            return("weak password")
+        else:
+            return("strong password")
+   
+ 
+print(check_pw("NgeeAnnPolytechnic"))
+print(check_pw("NgeeannpolytechniC"))
+print(check_pw("ngeeannpolytechnic"))
+print(check_pw("NgeeAnn"))
+print(check_pw("ngeeann"))
+
+business_data = [['Armchair', 120000, 85000], ['Dining Table', 180000, 100000], ['Bed', 230000, 140000]]
+def total_function(option):
+
+    total = 0
+    if option == "revenue":
+        for data in business_data:
+            total += data[1]
+
+    elif option == "cost":
+        for data in business_data:
+            total += data[2]
+
+    else:
+        return "Invalid Option"
+
+    return total
